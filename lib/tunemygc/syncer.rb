@@ -100,6 +100,8 @@ module TuneMyGc
 
     def process_config_callback(response)
       report_url = response.body.gsub(/\.json$/, '')
+      STDERR.puts "REPORT ... #{report_url}"
+      puts "REPORT ... #{report_url}"
       TuneMyGc.log "Please visit #{report_url} to view your configuration and other Garbage Collector insights"
     end
   end
